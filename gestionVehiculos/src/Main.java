@@ -1,17 +1,18 @@
-import vehiculo.Vehiculo;
+import vehiculo.Vehicle;
+import vehiculo.VehiclePrinter;
 
 public class Main {
     public static void main(String[] args) {
-        Vehiculo vehiculo1 = new Vehiculo("123456789", "Mercedes", 2020, 100.0);
+        Vehicle vehiculo1 = new Vehicle("123456789", "Mercedes", 2020, 100.0);
         System.out.println("Vehiculo 1");
-        vehiculo1.mostrarInformacion();
+        VehiclePrinter.mostrarInformacion(vehiculo1);
 
-        Vehiculo vehiculo2 = new Vehiculo("987654321", "BMW", 2021, 200.0);
+        Vehicle vehiculo2 = new Vehicle("987654321", "BMW", 2021, 200.0);
         System.out.println("Vehiculo 2");
-        vehiculo2.mostrarInformacion();
+        VehiclePrinter.mostrarInformacion(vehiculo2);
 
-        Vehiculo vehiculo3 = new Vehiculo("84746435", "Ford", 2022, 150.0);
+        Vehicle vehiculo3 = new Vehicle("84746435", "Ford", 2022, 150.0);
         System.out.println("Vehiculo 3");
-        vehiculo3.mostrarInformacion();
+        VehiclePrinter.mostrarInformacion(vehiculo3);
     }
 }
