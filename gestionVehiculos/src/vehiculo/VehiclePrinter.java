@@ -16,4 +16,12 @@ public class VehiclePrinter {
         System.out.println("Capacidad: " + camion.getCapacidadCargaKg());
         System.out.println("Tiene acoplado: " + camion.isTieneAcoplado());
     }
+
+    public static void mostrarInformacion(Auto auto) {
+        System.out.println("Patente: " + auto.getPatente());
+        System.out.println("Marca: " + auto.getMarca());
+        System.out.println("Anio: " + auto.getAnio());
+        System.out.println("Capacidad: " + auto.getCapacidadCargaKg());
+        System.out.println("Cantidad de pasajeros: " + auto.getCantidadPasajeros());
+    }
 }
