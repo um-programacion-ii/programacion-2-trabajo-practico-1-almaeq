@@ -3,7 +3,7 @@ package vehiculo;
 public class Camion extends Vehicle {
     private boolean tieneAcoplado;
 
-    public Camion(String patente, String marca, Integer anio, double capacidadCargaKg) {
+    public Camion(String patente, String marca, Integer anio, double capacidadCargaKg,boolean tieneAcoplado) {
         super(patente, marca, anio, capacidadCargaKg);
         this.tieneAcoplado = tieneAcoplado;
     }
