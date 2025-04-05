@@ -1,3 +1,4 @@
+import vehiculo.Camion;
 import vehiculo.Vehicle;
 import vehiculo.VehiclePrinter;
 
@@ -14,5 +15,11 @@ public class Main {
         Vehicle vehiculo3 = new Vehicle("84746435", "Ford", 2022, 150.0);
         System.out.println("Vehiculo 3");
         VehiclePrinter.mostrarInformacion(vehiculo3);
+
+        Camion camion1 = new Camion("123456789", "Mercedes", 2020, 100.0, true);
+        System.out.println("Camion 1");
+        VehiclePrinter.mostrarInformacion(camion1);
+
     }
+
 }
