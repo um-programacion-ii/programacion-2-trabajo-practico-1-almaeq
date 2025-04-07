@@ -3,28 +3,32 @@ import vehiculo.Camion;
 import vehiculo.Vehicle;
 import vehiculo.VehiclePrinter;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
-        Vehicle vehiculo1 = new Vehicle("123456789", "Mercedes", 2020, 100.0);
-        System.out.println("Vehiculo 1:");
-        VehiclePrinter.mostrarInformacion(vehiculo1);
+        // Crear lista
+        ArrayList<Vehicle> listaVehiculos = new ArrayList<>();
 
-        Vehicle vehiculo2 = new Vehicle("987654321", "BMW", 2021, 200.0);
-        System.out.println("Vehiculo 2:");
-        VehiclePrinter.mostrarInformacion(vehiculo2);
+        // Crear y agregar objetos
+        listaVehiculos.add(new Vehicle("123456789", "Mercedes", 2020, 100.0));
+        listaVehiculos.add(new Vehicle("987654321", "BMW", 2021, 200.0));
+        listaVehiculos.add(new Vehicle("84746435", "Ford", 2022, 150.0));
+        listaVehiculos.add(new Camion("847587490", "Mercedes", 2020, 100.0, true));
+        listaVehiculos.add(new Auto("682890233", "Mini", 2020, 100.0, 3));
 
-        Vehicle vehiculo3 = new Vehicle("84746435", "Ford", 2022, 150.0);
-        System.out.println("Vehiculo 3:");
-        VehiclePrinter.mostrarInformacion(vehiculo3);
+        // Recorrer e identificar tipo
+        for (Vehicle vehiculo : listaVehiculos) {
+            if (vehiculo instanceof Auto) {
+                System.out.println("Info Auto:");
+            } else if (vehiculo instanceof Camion) {
+                System.out.println("Info Camion:");
+            } else {
+                System.out.println("Info Vehiculo:");
+            }
 
-        Camion camion1 = new Camion("123456789", "Mercedes", 2020, 100.0, true);
-        System.out.println("Camion 1:");
-        VehiclePrinter.mostrarInformacion(camion1);
-
-        Auto auto1 = new Auto("123456789", "Mini", 2020, 100.0, 3);
-        System.out.println("Auto 1:");
-        VehiclePrinter.mostrarInformacion(auto1);
-
+            VehiclePrinter.mostrarInformacion(vehiculo);
+            System.out.println("----------------------");
+        }
     }
-
 }
