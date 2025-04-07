@@ -17,16 +17,9 @@ public class Main {
         listaVehiculos.add(new Camion("847587490", "Mercedes", 2020, 100.0, true));
         listaVehiculos.add(new Auto("682890233", "Mini", 2020, 100.0, 3));
 
-        // Recorrer e identificar tipo
+        // Recorrer e imprimir tipo e info
         for (Vehicle vehiculo : listaVehiculos) {
-            if (vehiculo instanceof Auto) {
-                System.out.println("Info Auto:");
-            } else if (vehiculo instanceof Camion) {
-                System.out.println("Info Camion:");
-            } else {
-                System.out.println("Info Vehiculo:");
-            }
-
+            System.out.println("Info " + vehiculo.getTipo() + ":");
             VehiclePrinter.mostrarInformacion(vehiculo);
             System.out.println("----------------------");
         }
@@ -34,14 +27,7 @@ public class Main {
         Vehicle encontrado = getVehiculo(listaVehiculos, "682890233");
 
         if (encontrado != null) {
-            if (encontrado instanceof Auto) {
-                System.out.println("Vehículo encontrado - Info Auto:");
-            } else if (encontrado instanceof Camion) {
-                System.out.println("Vehículo encontrado - Info Camion:");
-            } else {
-                System.out.println("Vehículo encontrado - Info Vehiculo:");
-            }
-
+            System.out.println("Vehículo encontrado - Info " + encontrado.getTipo() + ":");
             VehiclePrinter.mostrarInformacion(encontrado);
         } else {
             System.out.println("No se encontró vehículo con esa patente.");
@@ -49,13 +35,11 @@ public class Main {
     }
 
     private static Vehicle getVehiculo(ArrayList<Vehicle> vehiculos, String patente) {
-        Vehicle vehiculoEncontrado = null;
-        for (Vehicle vehiculo : vehiculos){
-            if (vehiculo.getPatente().equals(patente)){
-                vehiculoEncontrado = vehiculo;
-                break;
+        for (Vehicle vehiculo : vehiculos) {
+            if (vehiculo.getPatente().equals(patente)) {
+                return vehiculo;
             }
         }
-        return vehiculoEncontrado;
+        return null;
     }
 }
