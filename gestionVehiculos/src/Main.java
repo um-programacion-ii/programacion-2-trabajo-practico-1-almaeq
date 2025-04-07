@@ -30,5 +30,32 @@ public class Main {
             VehiclePrinter.mostrarInformacion(vehiculo);
             System.out.println("----------------------");
         }
+
+        Vehicle encontrado = getVehiculo(listaVehiculos, "682890233");
+
+        if (encontrado != null) {
+            if (encontrado instanceof Auto) {
+                System.out.println("Vehículo encontrado - Info Auto:");
+            } else if (encontrado instanceof Camion) {
+                System.out.println("Vehículo encontrado - Info Camion:");
+            } else {
+                System.out.println("Vehículo encontrado - Info Vehiculo:");
+            }
+
+            VehiclePrinter.mostrarInformacion(encontrado);
+        } else {
+            System.out.println("No se encontró vehículo con esa patente.");
+        }
+    }
+
+    private static Vehicle getVehiculo(ArrayList<Vehicle> vehiculos, String patente) {
+        Vehicle vehiculoEncontrado = null;
+        for (Vehicle vehiculo : vehiculos){
+            if (vehiculo.getPatente().equals(patente)){
+                vehiculoEncontrado = vehiculo;
+                break;
+            }
+        }
+        return vehiculoEncontrado;
     }
 }
