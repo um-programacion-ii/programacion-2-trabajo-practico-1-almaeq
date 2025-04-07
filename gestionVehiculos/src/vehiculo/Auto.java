@@ -15,4 +15,9 @@ public class Auto extends Vehicle {
     public void setCantidadPasajeros(int cantidadPasajeros) {
         this.cantidadPasajeros = cantidadPasajeros;
     }
+
+    @Override
+    public String getTipo() {
+        return "Auto";
+    }
 }

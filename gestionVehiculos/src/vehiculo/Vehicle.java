@@ -45,4 +45,8 @@ public class Vehicle {
         this.capacidadCargaKg = capacidadCargaKg;
     }
 
+    public String getTipo() {
+        return "Vehiculo";
+    }
+
 }

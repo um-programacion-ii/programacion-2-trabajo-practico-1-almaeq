@@ -15,4 +15,9 @@ public class Camion extends Vehicle {
     public void setTieneAcoplado(boolean tieneAcoplado) {
         this.tieneAcoplado = tieneAcoplado;
     }
+
+    @Override
+    public String getTipo() {
+        return "Camión";
+    }
 }
