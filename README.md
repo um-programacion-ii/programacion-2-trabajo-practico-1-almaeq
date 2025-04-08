@@ -1,4 +1,54 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/-JQrLgaz)
 # 🧠 Trabajo Práctico: Sistema de Gestión de Vehículos (Java + SOLID + GitHub)
+
+## Alumno: 
+Nombre y apellido: Alma Quinteros
+
+### ¿Cómo ejecutar?
+1. Clonar el repositorio
+```bash
+git clone git@github.com:um-programacion-ii/programacion-2-trabajo-practico-1-almaeq.git
+cd programacion-2-trabajo-practico-1-almaeq
+```
+2. Compila el código 
+Asegurarse primero de estar en la carpeta donde están los archivos .java
+```bash
+javac *.java
+```
+3. Ejecuta el código
+```bash
+java Main.java 
+```
+
+### Requisitos previos
+   -Java JDK 8 o superior instalado.
+   Verificá que tengas `javac` y `java` instalados:
+   ```bash
+      java -version
+      javac -version
+   ```
+   -IDE de tu elección (Eclipse, IntelliJ IDEA, etc.) o terminal para compilar y ejecutar.
+   -Git instalado para clonar el repositorio.
+
+### Ejemplo de Uso
+```bash
+   public class Main {
+      public static void main(String[] args) {
+           // Crear vehículos
+         Vehiculo auto1 = new Auto("JKL456", "Honda", 2022, 4);
+         Vehiculo camion1 = new Camion("MNO321", "Volvo", 2019, 12000, false);
+         Vehiculo auto2 = new Auto("PQR789", "Chevrolet", 2021, 5);
+
+         // Instancia del printer
+         VehiculoPrinter printer = new VehiculoPrinter();
+
+         // Imprimir información
+         printer.imprimir(auto1);
+         printer.imprimir(camion1);
+         printer.imprimir(auto2);
+      }
+   }
+   ```
 
 ## 📌 Objetivo General
 
