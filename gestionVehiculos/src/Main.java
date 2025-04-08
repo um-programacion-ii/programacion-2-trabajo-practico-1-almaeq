@@ -11,11 +11,11 @@ public class Main {
         ArrayList<Vehicle> listaVehiculos = new ArrayList<>();
 
         // Crear y agregar objetos
-        listaVehiculos.add(new Vehicle("123456789", "Mercedes", 2020, 100.0));
-        listaVehiculos.add(new Vehicle("987654321", "BMW", 2021, 200.0));
-        listaVehiculos.add(new Vehicle("84746435", "Ford", 2022, 150.0));
-        listaVehiculos.add(new Camion("847587490", "Mercedes", 2020, 100.0, true));
-        listaVehiculos.add(new Auto("682890233", "Mini", 2020, 100.0, 3));
+        listaVehiculos.add(new Vehicle("123ABC", "Mercedes", 2020, 100.0));
+        listaVehiculos.add(new Vehicle("456DEF", "BMW", 2021, 200.0));
+        listaVehiculos.add(new Vehicle("789GHI", "Ford", 2022, 150.0));
+        listaVehiculos.add(new Camion("AA000AA", "Mercedes", 2020, 100.0, true));
+        listaVehiculos.add(new Auto("AB101CD", "Mini", 2020, 100.0, 3));
 
         // Recorrer e imprimir tipo e info
         for (Vehicle vehiculo : listaVehiculos) {
@@ -24,7 +24,7 @@ public class Main {
             System.out.println("----------------------");
         }
 
-        Vehicle encontrado = getVehiculo(listaVehiculos, "682890233");
+        Vehicle encontrado = getVehiculo(listaVehiculos, "123ABC");
 
         if (encontrado != null) {
             System.out.println("Vehículo encontrado - Info " + encontrado.getTipo() + ":");
